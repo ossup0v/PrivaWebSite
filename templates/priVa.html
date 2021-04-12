@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}
+PriVa
+{% endblock %}
+{% block content %}
+<style>
+    .modal-body-fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: auto;
+        background: rgb(202, 186, 39);
+        /* Just to visualize the extent */
+    }
+
+    .outPopUp {
+        position: absolute;
+        font-style: italic;
+        z-index: 15;
+        top: 50%;
+        left: 50%;
+        margin: -200px 0 0 -400px;
+    }
+
+    
+    .hidden-overlay--large-percent{font-size: 1500%}
+    .hidden-overlay--large-rem{font-size: 1.5rem}
+    .hidden-overlay--large-rem{font-size: 1.5em}
+    .hidden-overlay--large-px{font-size: 20px}
+</style>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="fullscreen">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body-fullscreen">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="outPopUp">
+                        <div class="hidden-overlay"> <div class="hidden-overlay hidden-overlay--large-percent">
+                            пРИвА)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
